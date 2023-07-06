@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+select {
+    padding-right: 20px; /* Adjust this value to control the position of the arrow */
+    background-image: url('./assets/3916816.png'); /* Replace this with the path to your arrow icon */
+    background-repeat: no-repeat;
+    background-position: right center;
+    -moz-appearance: none; /* Remove default arrow icon in Firefox */
+    -webkit-appearance: none; /* Remove default arrow icon in Chrome and Safari */
+    appearance: none; /* Remove default arrow icon in other browsers */
+    background-size: 20px;
+    
+  }
