@@ -2,6 +2,8 @@
 
 ShoeMarket is a fullstack web market application for buying and selling shoes. It allows users to browse and purchase shoes, leave comments and reviews, and add their favorite shoes to their list.
 
+![ShoeMarket Screenshot](screenshot-2.png)
+
 ## Table of Contents
 
 - [Features](#features)
@@ -35,6 +37,7 @@ A live demo of ShoeMarket is available at [shoe-market-25f4a.web.app](shoe-marke
 - Firebase - Cloud-based platform for hosting and backend services
 - MongoDB - Document-oriented database for data storage
 - Mongoose - MongoDB object modeling for Node.js
+- Splide.js - Lightweight and flexible carousel/slider library
 
 ## Getting Started
 
