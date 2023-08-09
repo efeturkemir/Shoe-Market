@@ -33,6 +33,8 @@ A live demo of ShoeMarket is available at [shoe-market-25f4a.web.app](shoe-marke
 - Tailwind CSS - Utility-first CSS framework for styling
 - Express.js - Backend framework for handling API requests
 - Firebase - Cloud-based platform for hosting and backend services
+- MongoDB - Document-oriented database for data storage
+- Mongoose - MongoDB object modeling for Node.js
 
 ## Getting Started
 
