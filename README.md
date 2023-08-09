@@ -1,4 +1,4 @@
-# ShoeMarket - Fullstack Web Market for Shoes
+# ShoeMarket - Fullstack E-Commerce for Shoes
 
 ShoeMarket is a fullstack web market application for buying and selling shoes. It allows users to browse and purchase shoes, leave comments and reviews, and add their favorite shoes to their list.
 
