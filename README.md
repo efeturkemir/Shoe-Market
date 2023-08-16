@@ -38,6 +38,7 @@ A live demo of ShoeMarket is available at [shoe-market-25f4a.web.app](shoe-marke
 - MongoDB - Document-oriented database for data storage
 - Mongoose - MongoDB object modeling for Node.js
 - Splide.js - Lightweight and flexible carousel/slider library
+- JSON Web Token (JWT) - Security technology for authentication and data exchange
 
 ## Getting Started
 
