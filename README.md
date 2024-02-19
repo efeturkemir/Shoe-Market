@@ -57,3 +57,12 @@ To get a local copy of the project up and running on your machine, follow the st
 ```bash
 git clone https://github.com/efeturkemir/Shoe-Market.git
 cd Shoe-Market
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+
