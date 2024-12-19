@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import axios from "axios";
 import { ref } from "vue";
-
+const API_URL = import.meta.env.VITE_API_URL;
 export const useProductStore = defineStore("product", {
   state: () => ({
     products: ref([]),
@@ -16,9 +16,8 @@ export const useProductStore = defineStore("product", {
 
   actions: {
     async getProducts() {
-      const URL = "https://marketserver.onrender.com/products";
       this.loading = true;
-      const response = await axios.get(URL);
+      const response = await axios.get(`${API_URL}/products`);
       this.products = await response.data;
       this.loading = false;
     },
@@ -31,26 +30,23 @@ export const useProductStore = defineStore("product", {
     async clearCart() {
       this.productsOnCart = [];
     },
-    async addComment(_productId, _comment, _username){
-      try{
-      const URL = `https://marketserver.onrender.com/products/${_productId}/comments`
-      const response = await axios.post(URL, {
-       text: _comment,
-       user: _username
-      })
+    async addComment(_productId, _comment, _username) {
+      try {
+        const URL = `${API_URL}/products/${_productId}/comments`;
+        const response = await axios.post(URL, {
+          text: _comment,
+          user: _username,
+        });
 
-      console.log(response);
-      
-    }
-  catch(err){
-    console.log(err);
-  }
-
+        console.log(response);
+      } catch (err) {
+        console.log(err);
+      }
     },
     async getComments(productId) {
-      const URL = `https://marketserver.onrender.com/products/${productId}/comments`;
+      const URL = `${API_URL}/products/${productId}/comments`;
       const response = await axios.get(URL);
-      this.comments = await response.data.comments
+      this.comments = await response.data.comments;
       console.log(this.comments);
     },
   },

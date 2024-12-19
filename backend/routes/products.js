@@ -32,31 +32,35 @@ router.put("/:id", async (req, res) => {
 });
 router.post("/:id/comments", express.json(), async (req, res) => {
   const { id } = req.params;
- const {comment, username} = req.body
+  const { comment, username } = req.body;
   try {
-    const updatedProduct = await Product.findByIdAndUpdate(id, {
-      $push: { comments: { text: comment, user: username } },
-    },{new: true});
+    const updatedProduct = await Product.findByIdAndUpdate(
+      id,
+      {
+        $push: { comments: { text: comment, user: username } },
+      },
+      { new: true }
+    );
 
     if (!updatedProduct) {
       return res.status(404).json({ error: "Product not found" });
     }
-    res.json("Comment Added!")
+    res.json("Comment Added!");
   } catch (error) {
     res.status(500).json({ error: "Server error" });
     console.log(error);
     console.log(req.body.comment);
   }
 });
-router.get("/:id/comments", async (req,res) =>{
-  const {id} = req.params
-  try{
-    const comments = await Product.findById(id, 'comments')
-    if(!comments){
+router.get("/:id/comments", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const comments = await Product.findById(id, "comments");
+    if (!comments) {
       return res.status(404).json({ error: "Product not found" });
     }
-    res.json(comments)
-  }catch(error){
-   console.log(error);
+    res.json(comments);
+  } catch (error) {
+    console.log(error);
   }
-})
+});
