@@ -121,7 +121,7 @@ onMounted(() => {
             <div
               class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 font-bold"
             >
-              {{ comment.user ? comment.user.charAt(0).toUpperCase() : "" }}
+           {{ comment.user ? comment.user.charAt(0).toUpperCase() : '' }}
             </div>
           </div>
           <!-- Comment Content -->

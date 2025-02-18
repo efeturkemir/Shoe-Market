@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const loginRouter = require('./routes/loginRouter')
 const registerRouter = require('./routes/registerRouter')
 const products = require('./routes/products');
-const auth = require('./middlewares/auth');
 const corsOrigin ={
   origin: ['https://shoe-market-25f4a.web.app', 'http://localhost:5173'], //or whatever port your frontend is using
   credentials: true,            
