@@ -26,6 +26,10 @@ app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/products', products);
 
+app.get('/status', (req, res) => {
+  res.status(200).send('OK');
+});
+
 const port = process.env.PORT;
 app.listen(port, () => {
   mongoose.connect(process.env.DATABASE_URL, {
